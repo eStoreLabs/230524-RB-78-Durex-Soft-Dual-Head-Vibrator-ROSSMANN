@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "One Night Sans Extended";
+  src: url(../fonts/OneNightSans-Extended.ttf) format("truetype");
+}
+@font-face {
+  font-family: "One Night Sans Extended Black";
+  src: url(../fonts/OneNightSans-ExtendedBlack.ttf) format("truetype");
+}
+@font-face {
+  font-family: "One Night Sans Thin";
+  src: url(../fonts/OneNightSans-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "One Night Sans Black";
+  src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
+}
+#es-rc #es-rc-content,
+#es-rc #es-rc-content html,
+#es-rc #es-rc-content body,
+#es-rc #es-rc-content div,
+#es-rc #es-rc-content section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+#es-rc #es-rc-content img {
+  display: block;
+  max-width: 100%;
+}
+
+#es-rc #es-rc-content {
+  font-family: "One Night Sans Extended", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.2;
+  max-width: 959px;
+  margin: auto;
+  color: #FFF;
+  width: 100%;
+}
+#es-rc #es-rc-content .es-section__top {
+  background-image: url(../images/bg-1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#es-rc #es-rc-content .es-section__bottom {
+  background-image: url(../images/bg-2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}/*# sourceMappingURL=style.css.map */
