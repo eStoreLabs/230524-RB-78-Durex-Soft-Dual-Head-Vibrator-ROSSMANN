@@ -14,18 +14,10 @@
   font-family: "One Night Sans Black";
   src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
 }
-#es-rc #es-rc-content,
-#es-rc #es-rc-content html,
-#es-rc #es-rc-content body,
-#es-rc #es-rc-content div,
-#es-rc #es-rc-content section {
+html,
+body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
 }
 
 #es-rc #es-rc-content img {
@@ -34,6 +26,13 @@
 }
 
 #es-rc #es-rc-content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
   font-family: "One Night Sans Extended", sans-serif;
   text-transform: uppercase;
   font-size: 16px;
@@ -43,10 +42,76 @@
   color: #FFF;
   width: 100%;
 }
+#es-rc #es-rc-content h1 {
+  margin-block: 0;
+}
 #es-rc #es-rc-content .es-section__top {
   background-image: url(../images/bg-1.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+#es-rc #es-rc-content .es-kv {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv {
+    padding-top: 0;
+    padding-left: 0;
+    position: relative;
+    height: 450px;
+  }
+}
+#es-rc #es-rc-content .es-kv__img {
+  display: none;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__img {
+    display: block;
+  }
+}
+#es-rc #es-rc-content .es-kv__packshot {
+  margin: auto;
+  max-height: 300px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__packshot {
+    max-height: unset;
+    position: absolute;
+    transform: translate(-50%);
+    bottom: 0;
+    left: 52%;
+  }
+}
+#es-rc #es-rc-content .es-kv__title {
+  font-size: 32px;
+  padding-block: 2rem;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__title {
+    font-size: 39px;
+  }
+}
+#es-rc #es-rc-content .es-kv__title--span {
+  display: block;
+}
+#es-rc #es-rc-content .es-kv__title-container {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-kv__title-container {
+    text-align: left;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 33%;
+    right: -7%;
+    width: 266px;
+  }
+}
+#es-rc #es-rc-content .es-carousel .es-slide__img--1 {
+  max-height: 300px;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__img--arrow {
+  fill: white;
 }
 #es-rc #es-rc-content .es-section__bottom {
   background-image: url(../images/bg-2.png);

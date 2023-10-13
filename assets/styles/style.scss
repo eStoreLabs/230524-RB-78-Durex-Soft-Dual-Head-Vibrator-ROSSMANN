@@ -1,4 +1,5 @@
 $font-color: #FFF;
+$padding-section: 2rem;
 
 @font-face {
     font-family: "One Night Sans Extended";
@@ -20,11 +21,18 @@ $font-color: #FFF;
     src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
 }
 
-#es-rc #es-rc-content,
-#es-rc #es-rc-content html,
-#es-rc #es-rc-content body,
-#es-rc #es-rc-content div,
-#es-rc #es-rc-content section {
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#es-rc #es-rc-content img {
+    display: block;
+    max-width: 100%;
+}
+
+#es-rc #es-rc-content {
     margin: 0;
     padding: 0;
     border: 0;
@@ -32,13 +40,13 @@ $font-color: #FFF;
     font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
-}
-#es-rc #es-rc-content img {
-    display: block;
-    max-width: 100%;
-}
-#es-rc #es-rc-content {
-    font-family: "One Night Sans Extended", sans-serif;
+
+    h1 {
+        margin-block: 0;
+    }
+
+    font-family: "One Night Sans Extended",
+    sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 1.2;
@@ -46,15 +54,79 @@ $font-color: #FFF;
     margin: auto;
     color: $font-color;
     width: 100%;
+
     & .es-section__top {
         background-image: url(../images/bg-1.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
+
+    & .es-kv {
+        padding: $padding-section;
+
+        @media (min-width: 768px) {
+            padding-top: 0;
+            padding-left: 0;
+            position: relative;
+            height: 450px;
+        }
+        &__img {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        &__packshot {
+            margin: auto;
+            max-height: 300px;
+            @media (min-width: 768px) {
+                max-height: unset;
+                position: absolute;
+                transform: translate(-50%);
+                bottom: 0;
+                left: 52%;
+            }
+        }
+
+        &__title {
+            font-size: 32px;
+            padding-block: 2rem;
+            @media (min-width: 768px) {
+                font-size: 39px;
+            }
+            &--span {
+                display: block;
+            }
+
+            &-container {
+                text-align: center;
+
+                @media (min-width: 768px) {
+                    text-align: left;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 33%;
+                    right: -7%;
+                    width: 266px;
+                }
+            }
+        }
+    }
+    & .es-carousel {
+        .es-slide {
+            &__img--1 {
+                max-height: 300px;
+            }
+            &__img--arrow {
+                fill: white;
+            }
+        }
+    }
+
     & .es-section__bottom {
         background-image: url(../images/bg-2.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
 }
-
