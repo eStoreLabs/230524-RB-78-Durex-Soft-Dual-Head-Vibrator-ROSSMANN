@@ -11,6 +11,10 @@
   src: url(../fonts/OneNightSans-Thin.ttf) format("truetype");
 }
 @font-face {
+  font-family: "One Night Sans Medium";
+  src: url(../fonts/OneNightSans-Medium.ttf) format("truetype");
+}
+@font-face {
   font-family: "One Night Sans Black";
   src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
 }
@@ -35,7 +39,7 @@ body {
   box-sizing: border-box;
   font-family: "One Night Sans Extended", sans-serif;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
   line-height: 1.2;
   max-width: 959px;
   margin: auto;
@@ -83,7 +87,7 @@ body {
   }
 }
 #es-rc #es-rc-content .es-kv__title {
-  font-size: 32px;
+  font-size: clamp(1.75rem, 1.6759rem + 0.3704vw, 2rem);
   padding-block: 2rem;
 }
 @media (min-width: 768px) {
@@ -107,14 +111,184 @@ body {
     width: 266px;
   }
 }
+#es-rc #es-rc-content .es-carousel .es-slide__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__container--1 {
+  position: relative;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__container--3 .es-slide__text {
+  font-family: "One Night Sans Thin";
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__container--3 {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
 #es-rc #es-rc-content .es-carousel .es-slide__img--1 {
-  max-height: 300px;
+  max-height: 260px;
 }
 #es-rc #es-rc-content .es-carousel .es-slide__img--arrow {
+  display: none;
   fill: white;
+  max-width: 120px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__img--arrow {
+    display: block;
+  }
+}
+#es-rc #es-rc-content .es-carousel .es-slide .es-arrow--1 {
+  transform: scaleX(-1);
+}
+#es-rc #es-rc-content .es-carousel .es-slide__text-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__text-container {
+    position: absolute;
+    max-width: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
+#es-rc #es-rc-content .es-carousel .es-slide__text-container:nth-of-type(1) {
+  align-items: flex-end;
+  top: 50%;
+  left: 25%;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__text-container:nth-of-type(2) {
+  align-items: flex-start;
+  top: 40%;
+  right: -5%;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__text {
+  text-align: center;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__text--bold {
+  font-family: "One Night Sans Extended Black";
+  display: block;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__title {
+  font-size: clamp(2rem, 1.7037rem + 1.4815vw, 3rem);
+  text-align: center;
+  margin-block: 1.5rem;
+  font-family: "One Night Sans Thin";
+}
+#es-rc #es-rc-content .es-carousel .es-slide__title--bold {
+  font-family: "One Night Sans Black";
+}
+#es-rc #es-rc-content .es-carousel .es-slide__flex-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__flex-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+#es-rc #es-rc-content .es-carousel .es-slide__single {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__single--3 {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__single--3 {
+    flex-basis: 33%;
+  }
+}
+#es-rc #es-rc-content .es-carousel .es-slide__number {
+  width: 3ch;
+  font-size: clamp(1.125rem, 1.0139rem + 0.5556vw, 1.5rem);
+  text-align: center;
+  font-family: "One Night Sans Medium";
+  margin-block: 1rem;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__icon {
+  width: 300px;
+}
+#es-rc #es-rc-content .es-carousel .es-slide__icon--3 {
+  height: 84px;
+}
+@media (min-width: 768px) {
+  #es-rc #es-rc-content .es-carousel .es-slide__icon--3 {
+    height: 128px;
+  }
 }
 #es-rc #es-rc-content .es-section__bottom {
   background-image: url(../images/bg-2.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+/***************************** slider styles ***************************/
+.es-slider {
+  overflow: hidden;
+}
+
+.es-slider .es-carousel-container {
+  position: relative;
+  width: 300%;
+}
+
+.es-slider .es-carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.es-slider .es-slide {
+  flex: 0 0 33.3333%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.es-slider .es-carousel-arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: calc(100vw - 20px);
+  max-width: 959px;
+}
+
+.es-slider .es-prev-arrow,
+.es-slider .es-next-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.es-slider .es-prev-arrow {
+  width: 50px;
+  height: 50px;
+  rotate: 180deg;
+}
+
+.es-slider .es-next-arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.es-slider .es-prev-arrow:hover,
+.es-slider .es-next-arrow:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

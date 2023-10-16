@@ -15,6 +15,10 @@ $padding-section: 2rem;
     font-family: "One Night Sans Thin";
     src: url(../fonts/OneNightSans-Thin.ttf) format("truetype");
 }
+@font-face {
+    font-family: "One Night Sans Medium";
+    src: url(../fonts/OneNightSans-Medium.ttf) format("truetype");
+}
 
 @font-face {
     font-family: "One Night Sans Black";
@@ -48,7 +52,7 @@ body {
     font-family: "One Night Sans Extended",
     sans-serif;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: clamp(1rem, 0.963rem + 0.1852vw, 1.125rem);
     line-height: 1.2;
     max-width: 959px;
     margin: auto;
@@ -90,7 +94,7 @@ body {
         }
 
         &__title {
-            font-size: 32px;
+            font-size: clamp(1.75rem, 1.6759rem + 0.3704vw, 2rem);
             padding-block: 2rem;
             @media (min-width: 768px) {
                 font-size: 39px;
@@ -115,18 +119,182 @@ body {
     }
     & .es-carousel {
         .es-slide {
+            &__container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                &--1 {
+                    position: relative;
+                }
+                &--3 {
+                    .es-slide__text {
+                        font-family: "One Night Sans Thin";
+                    }
+                    @media (min-width: 768px) {
+                        flex-direction: row;
+                        align-items: flex-start;
+                    }
+                }
+            }
             &__img--1 {
-                max-height: 300px;
+                max-height: 260px;
             }
             &__img--arrow {
+                display: none;
                 fill: white;
+                max-width: 120px;
+                @media (min-width: 768px) {
+                    display: block;
+                }
             }
+            .es-arrow--1 {
+                    transform: scaleX(-1);
+                }
+            &__text-container {
+                display: flex;
+                flex-direction: column;
+
+                @media (min-width: 768px) {
+                    position: absolute;
+                max-width: 30%;
+                transform: translate(-50%, -50%);
+
+                }
+                
+                &:nth-of-type(1) {
+                    
+                    align-items: flex-end;
+                    top: 50%;
+                    left: 25%;
+                }
+                &:nth-of-type(2) {
+                    align-items: flex-start;
+                    top: 40%;
+                    right: -5%;
+                }
+            }
+            &__text {
+                text-align: center;
+                &--bold {
+                    font-family: "One Night Sans Extended Black";
+                    display: block;
+                }
+            }
+            &__title {
+                font-size: clamp(2rem, 1.7037rem + 1.4815vw, 3rem);
+                text-align: center;
+                margin-block: 1.5rem;
+                font-family: "One Night Sans Thin";
+                &--bold {
+                    font-family: "One Night Sans Black";
+                }
+            }
+            &__flex-container {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    gap: 3rem;
+                }
+                
+            }
+            &__single {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                &--3 {
+                    flex-direction: column;
+                    @media (min-width: 768px) {
+                        flex-basis: 33%;
+                    }
+                }
+            }
+            &__number {
+                width: 3ch;
+                font-size: clamp(1.125rem, 1.0139rem + 0.5556vw, 1.5rem);
+                text-align: center;
+                font-family: "One Night Sans Medium";
+                margin-block: 1rem;
+            }
+            &__icon {
+                width: 300px;
+                &--3 {
+                    height: 84px;
+                    @media (min-width: 768px) {
+                        height: 128px;
+                    }
+                }
+            }
+
         }
     }
-
+    
     & .es-section__bottom {
         background-image: url(../images/bg-2.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
 }
+
+
+/***************************** slider styles ***************************/
+.es-slider {
+    overflow: hidden;
+} 
+.es-slider .es-carousel-container {
+    position: relative;
+    width: 300%;
+  }
+  
+   .es-slider .es-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+   .es-slider .es-slide {
+    flex: 0 0 33.3333%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .es-slider .es-carousel-arrows {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: calc(100vw - 20px);
+    max-width: 959px;
+  }
+  
+ .es-slider .es-prev-arrow,
+  .es-slider .es-next-arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .es-slider .es-prev-arrow {
+    width: 50px;
+    height: 50px;
+    rotate: 180deg;
+  }
+ .es-slider .es-next-arrow {
+    width: 50px;
+    height: 50px;
+  }
+   .es-slider .es-prev-arrow:hover,
+   .es-slider .es-next-arrow:hover {
+    cursor: pointer;
+  }
+
+  
