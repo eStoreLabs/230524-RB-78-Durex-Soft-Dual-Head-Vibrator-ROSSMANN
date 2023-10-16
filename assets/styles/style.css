@@ -18,6 +18,36 @@
   font-family: "One Night Sans Black";
   src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
 }
+@keyframes point {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes point-horizontal {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html,
 body {
   margin: 0;
@@ -433,4 +463,24 @@ body {
 .es-slider .es-prev-arrow:hover,
 .es-slider .es-next-arrow:hover {
   cursor: pointer;
+}
+
+/* reveal on scroll animations */
+.es-info__single,
+.es-slide__text-container,
+.es-kv__packshot,
+.es-kv__title-container,
+.es-features__single {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.es-info__single.reveal,
+.es-slide__text-container.reveal,
+.es-kv__packshot.reveal,
+.es-kv__title-container.reveal,
+.es-features__single.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
