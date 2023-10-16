@@ -29,81 +29,191 @@ $border: 3px solid white;
 
 @-webkit-keyframes point {
     0% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
     }
+
     50% {
-      -webkit-transform: translateY(5px);
-      transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
     }
+
     100% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
     }
-  }
-  
-  @keyframes point {
+}
+
+@keyframes point {
     0% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
     }
+
     50% {
-      -webkit-transform: translateY(5px);
-      transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
     }
+
     100% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
     }
-  }
-  
-  @-webkit-keyframes point-horizontal {
+}
+
+@-webkit-keyframes point-horizontal {
     0% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
     }
+
     50% {
-      -webkit-transform: translateX(5px);
-      transform: translateX(5px);
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
     }
+
     100% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
     }
-  }
-  
-  @keyframes point-horizontal {
+}
+
+@keyframes point-horizontal {
     0% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
     }
+
     50% {
-      -webkit-transform: translateX(5px);
-      transform: translateX(5px);
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
     }
+
     100% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
     }
-  }
-  
-  @-webkit-keyframes appear {
+}
+
+@-webkit-keyframes appear {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes appear {
+}
+
+@keyframes appear {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
+}
+
+@keyframes vibrate-3 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    2% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    4% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    6% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    8% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    10% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    12% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    14% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    16% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    18% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    20% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      22% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      24% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      26% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      28% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      30% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      32% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      34% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      36% {
+        -webkit-transform: translate(-2px, -2px);
+                transform: translate(-2px, -2px);
+      }
+      38% {
+        -webkit-transform: translate(2px, -2px);
+                transform: translate(2px, -2px);
+      }
+      40% {
+        -webkit-transform: translate(-2px, 2px);
+                transform: translate(-2px, 2px);
+      }
+      42% {
+        -webkit-transform: translate(2px, 2px);
+                transform: translate(2px, 2px);
+      }
+      44% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }
+    100% {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+      }
   }
+
 
 html,
 body {
@@ -166,13 +276,15 @@ body {
         &__packshot {
             margin: auto;
             max-height: 300px;
-
+            -webkit-animation: vibrate-3 0.5s linear infinite both;
+            animation: vibrate-3 2s linear infinite both;
+            animation-delay: 1s;
             @media (min-width: 768px) {
                 max-height: unset;
                 position: absolute;
-                transform: translate(-50%);
+                //transform: translate(-50%);
                 bottom: 0;
-                left: 52%;
+                left: 37%;
             }
         }
 
@@ -331,6 +443,12 @@ body {
 
                 &--3 {
                     height: 84px;
+                    scale: 1;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        scale: 1.05;
+                    }
 
                     @media (min-width: 768px) {
                         height: 128px;
@@ -458,35 +576,49 @@ body {
             font-size: clamp(1.375rem, 1.1528rem + 1.1111vw, 2.125rem);
         }
     }
+
     .es-features {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         margin-block: 4rem;
+
         figure {
             margin: 0;
         }
+
         @media (min-width: 768px) {
             flex-direction: row;
             width: 100%;
         }
+
         &__single {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 2rem;
+
             @media (min-width: 768px) {
                 flex-basis: 25%;
             }
         }
+
         &__icon {
             object-fit: contain;
             object-position: center;
             height: 125px;
             width: 125px;
+            scale: 1;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                scale: 1.05;
+            }
         }
+
         &__text {
             font-family: "One Night Sans Thin";
+
             &--bold {
                 display: block;
                 font-family: "One Night Sans Extended Black";
@@ -564,15 +696,16 @@ body {
 .es-kv__packshot,
 .es-kv__title-container,
 .es-features__single {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
 }
+
 .es-info__single.reveal,
 .es-slide__text-container.reveal,
 .es-kv__packshot.reveal,
 .es-kv__title-container.reveal,
 .es-features__single.reveal {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
