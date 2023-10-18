@@ -1,22 +1,22 @@
 @font-face {
   font-family: "One Night Sans Extended";
-  src: url(../fonts/OneNightSans-Extended.ttf) format("truetype");
+  src: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/fonts/OneNightSans-Extended.ttf") format("truetype");
 }
 @font-face {
   font-family: "One Night Sans Extended Black";
-  src: url(../fonts/OneNightSans-ExtendedBlack.ttf) format("truetype");
+  src: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/fonts/OneNightSans-ExtendedBlack.ttf") format("truetype");
 }
 @font-face {
   font-family: "One Night Sans Thin";
-  src: url(../fonts/OneNightSans-Thin.ttf) format("truetype");
+  src: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/fonts/OneNightSans-Thin.ttf") format("truetype");
 }
 @font-face {
   font-family: "One Night Sans Medium";
-  src: url(../fonts/OneNightSans-Medium.ttf) format("truetype");
+  src: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/fonts/OneNightSans-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "One Night Sans Black";
-  src: url(../fonts/OneNightSans-Black.ttf) format("truetype");
+  src: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/fonts/OneNightSans-Black.ttf") format("truetype");
 }
 @keyframes point {
   0% {
@@ -154,7 +154,7 @@ body {
   margin-block: 0;
 }
 #es-rc #es-rc-content .es-section__top {
-  background-image: url(../images/bg-1.png);
+  background-image: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/images/bg-1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -337,7 +337,7 @@ body {
   }
 }
 #es-rc #es-rc-content .es-section__bottom {
-  background-image: url(../images/bg-2.png);
+  background-image: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/images/bg-2.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   text-align: center;
@@ -361,7 +361,7 @@ body {
 }
 #es-rc #es-rc-content .es-info:after {
   content: "";
-  background-image: url(../images/hand.png);
+  background-image: url("https://www.ros.net.pl/Portals/0/rich-content/durex/3275945/images/hand.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
@@ -568,4 +568,4 @@ body {
 .es-features__single.reveal {
   opacity: 1;
   transform: translateY(0);
-}/*# sourceMappingURL=style.css.map */
+}
